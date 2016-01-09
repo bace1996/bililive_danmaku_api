@@ -1,22 +1,23 @@
-# Bililive danmaku Api 
+# Bililive danmaku API 
 Include apis for BilibiliLive
 
-## Bilibili Live socket comment
+## Requirements
+- Python2.7.x or Python3.4.x(recommended)
 
-recive comment
+## Known problem
+- Program would crash in some bad condition network
+- Some apis had not finished
 
-## Author
+## Contributors
 
 **Cykrt**
 - <https://github.com/bace1996>
 - <https://twitter.com/Cykrt1996>
 
+**Sg4Dylan**
+- <https://github.com/Sg4Dylan>
+
 ## License
 
 Open sourced under the [GPLv2](LICENSE).
 
-\m/
-
-## Thanks
-
-Thanks to [@SgDylan](https://github.com/Sg4Dylan) for help to coding.

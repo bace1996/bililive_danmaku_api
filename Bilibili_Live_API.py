@@ -87,18 +87,13 @@ class Live:
                 #print(data)
                 self.s.setblocking(0)
                 self.s.setblocking(1024)
-            #if you do not need print in Windows, please comment this
-            #data2 = data.encode('gbk')
-            #print(type(data))
-            #print(data)
             #try to covert to json format
             try:
-                #When there are too many danmaku, 
-                #json.loads() method will throw exception because of data divided to more than one buffer block.
-                #So, you know, fix it!
                 info = json.loads(data)
                 try:
+                    #receive danmuku info
                     output = info['info'][2][1]+':'+info['info'][1]
+                    #cancel comment this in python2
                     #output = output.encode('gbk')
                     print(output)
                 except:
