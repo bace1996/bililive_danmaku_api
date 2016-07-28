@@ -10,7 +10,7 @@ class SendLiveDanmaku:
     cookie = {}
     danmaku = {}
     header = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2612.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.30 Safari/537.36',
     }
     url = "http://live.bilibili.com/msg/send"
     
@@ -24,7 +24,7 @@ class SendLiveDanmaku:
     def parseCookie(self):
         data = self.precookie.split(";",21)
         cok = ""
-        for x in range(0,20):
+        for x in range(0,len(data)-1):
             spa = data[x].split("=",2)
             cok += "'" + spa[0].lstrip(" ") + "': '" + spa[1] + "',\n"
         cok = "{" + cok + "}"
@@ -41,7 +41,7 @@ class SendLiveDanmaku:
         return r.text
 
 mycookie = ""
-msg = SendLiveDanmaku(mycookie, "59340", "TEST2", "25")
+msg = SendLiveDanmaku(mycookie, "157901", "nyaa", "25")
 print msg.sendDanmaku()
 print msg.danmaku
 print msg.cookie
